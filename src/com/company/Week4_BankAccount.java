@@ -3,14 +3,20 @@ package com.company;
 public class Week4_BankAccount {
     private double balance;
     private float interestRate;
+    private int accountID;
+    private static int nextID = 1000;
 
     public Week4_BankAccount(){
         interestRate = 0.02f;
+        accountID = nextID;
+        nextID++;
     }
 
     public Week4_BankAccount(double initialBalance, float initialRate){
         balance = initialBalance;
         interestRate = initialRate;
+        accountID = nextID;
+        nextID += 1;
     }
 
     public void deposit(double amount){
@@ -33,6 +39,9 @@ public class Week4_BankAccount {
     }
     public void printBalance(){
         System.out.println(balance);
+    }
+    public int getAccountID(){
+        return accountID;
     }
 
 }
