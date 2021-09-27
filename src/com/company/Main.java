@@ -1,10 +1,10 @@
 package com.company;
 
-public class Week4_Main {
+public class Main {
 
     public static void main(String[] args) {
-        var myAccount = new Week4_BankAccount();
-        var yourAccount = new Week4_BankAccount(2000,0.05f);
+        var myAccount = new BankAccount();
+        var yourAccount = new BankAccount(2000,0.05f);
         myAccount.deposit(1000);
         myAccount.addInterest();
         yourAccount.addInterest();
