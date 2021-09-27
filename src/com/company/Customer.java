@@ -17,6 +17,7 @@ public class Customer {
         var newAccount = new BankAccount();
         newAccount.deposit(initialBalance);
         var didSucceed = accounts.add(newAccount);
+        return didSucceed;
     }
 
     public String getName(){
