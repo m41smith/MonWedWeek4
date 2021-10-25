@@ -1,6 +1,8 @@
 package com.company;
 
-public class BankAccount {
+import java.io.File;
+
+public class BankAccount implements Logger{
     private double balance;
     private float interestRate;
     private int accountID;
@@ -39,6 +41,13 @@ public class BankAccount {
     }
     public int getAccountID(){
         return accountID;
+    }
+
+    @Override
+    public void writeLogging(String toLog) {
+        File logFile = new File(Logger.DEFAULT_FILE_NAME);
+        if (logFile.canWrite())
+            System.out.println("If we had try/catch and error we would write to file");
     }
 
 }
